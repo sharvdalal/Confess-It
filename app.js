@@ -11,7 +11,7 @@ const passportLocalMongoose = require('passport-local-mongoose');
 const app = express();
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const findOrCreate = require('mongoose-findorcreate');
-
+const PORT = process.env.PORT || 5000;
 app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({
@@ -192,6 +192,6 @@ app.post('/submit', (req,res)=>{
 })
 
 
-app.listen(8000, function() {
-  console.log("Server started on port 8000");
+app.listen(PORT, function() {
+  console.log("Server started on port" + PORT);
 });
