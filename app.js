@@ -11,7 +11,7 @@ const passportLocalMongoose = require('passport-local-mongoose');
 const app = express();
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const findOrCreate = require('mongoose-findorcreate');
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8000;
 app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({
