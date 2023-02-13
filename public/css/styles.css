@@ -10,9 +10,19 @@ body, .jumbotron {
 }
 
 .secret-text {
+  display: flex;
   text-align: center;
   font-size: 1.5rem;
   color: #fff;
   background: rgb(73,176,208);
   background: linear-gradient(90deg, rgba(73,176,208,1) 0%, rgba(83,122,145,1) 47%, rgba(73,114,162,1) 100%); 
+  margin-top: 10px;
+  border-radius: 2%;
+
+}
+
+.confessArea{
+  display:flex;
+  flex-direction: column;
+  
 }
