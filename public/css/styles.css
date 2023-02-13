@@ -1,6 +1,7 @@
 
-body {
-  background-color: #E8ECEF;
+body, .jumbotron {
+  background: rgb(73,176,208);
+  background: linear-gradient(90deg, rgba(73,176,208,1) 0%, rgba(229,234,237,1) 48%, rgba(73,114,162,1) 100%); 
 }
 
 .centered {
@@ -10,7 +11,8 @@ body {
 
 .secret-text {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #fff;
-  background-color: #000;
+  background: rgb(73,176,208);
+  background: linear-gradient(90deg, rgba(73,176,208,1) 0%, rgba(83,122,145,1) 47%, rgba(73,114,162,1) 100%); 
 }
