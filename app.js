@@ -42,7 +42,8 @@ const userSchema = new mongoose.Schema(
         email:String,
         password:String,
         googleId:String,
-        secret:String
+        secret:String,
+        confessheading:String
     }
 );  
 
@@ -112,6 +113,7 @@ app.get('/secrets', (req,res)=>{
          if(err){
             console.log(err);
          }else{
+            console.log(foundUser);
             if(foundUser){
                 res.render("secrets.ejs",{usersWithSecrets: foundUser})
             }
@@ -177,6 +179,8 @@ app.post('/login', (req,res)=>{
 
 app.post('/submit', (req,res)=>{
     const submittedSecret = req.body.secret;
+    const confessHeading = req.body.confessheading;
+    
     User.findById(req.user.id, (err, foundUser)=>{
         if(err){
             console.log(err);
@@ -184,6 +188,7 @@ app.post('/submit', (req,res)=>{
             if(foundUser){
                 console.log(foundUser);
                 foundUser.secret = submittedSecret;
+                foundUser.confessheading = confessHeading;
                 foundUser.save(()=>{
                     res.redirect('/secrets');
                 })

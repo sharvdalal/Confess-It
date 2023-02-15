@@ -11,18 +11,61 @@ body, .jumbotron {
 
 .secret-text {
   display: flex;
+  flex-direction: column;
   text-align: center;
+  /* justify-content: center; */
   font-size: 1.5rem;
   color: #fff;
   background: rgb(73,176,208);
   background: linear-gradient(90deg, rgba(73,176,208,1) 0%, rgba(83,122,145,1) 47%, rgba(73,114,162,1) 100%); 
   margin-top: 10px;
-  border-radius: 2%;
-
+  /* border-radius: 2%; */
+  height: 20vh;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 .confessArea{
   display:flex;
   flex-direction: column;
   
+}
+.secretTextHeading{
+  margin-top: 20px;
+}
+
+.submitBody{
+  background-color: aqua;
+}
+
+.submitHeading{
+  margin: auto;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.submitForm-main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 100px;
+  height: 100px; */
+   
+    
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    margin: auto;
+  
+}
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+  
+}
+.form-group input{
+  margin-bottom: 10px;
 }

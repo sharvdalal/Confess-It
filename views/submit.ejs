@@ -1,19 +1,21 @@
 <%- include('partials/header') %>
 
 <div class="container">
-  <div class="jumbotron centered">
-    <h1 class="display-3">Just do It</h1>
-    <p class="secret-text">Confession Helps</p>
-
-    <form action="/submit" method="POST">
+  
+    <h1 class="submitHeading">Confession Helps</h1>
+   
+    <div class="submitForm-main">
+    <form class="submitForm" action="/submit" method="POST">
 
       <div class="form-group">
+        <input type="text" placeholder="What's this Confession about?" name="confessheading" id="confess-heading" >
         <textarea  rows="4" cols="50" class="form-control text-center" name="secret" placeholder="What's your secret?"></textarea>
       </div>
       <button type="submit" class="btn btn-dark">Submit</button>
     </form>
-
-
   </div>
+
+
+ 
 </div>
 <%- include('partials/footer') %>
